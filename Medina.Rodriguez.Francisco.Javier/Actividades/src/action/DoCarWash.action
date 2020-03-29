@@ -1,0 +1,8 @@
+#efinimos el objeto (goal)
+int32 number_of_cars #Especificamos el numero de automoviles
+---
+#Definimos el resultado (result)
+int32 total_cars_cleaned #Total de automoviles limpios
+---
+# definimos la retroalimentacion (feedback)
+float32 porcent_cars_complete #porcentaje completado

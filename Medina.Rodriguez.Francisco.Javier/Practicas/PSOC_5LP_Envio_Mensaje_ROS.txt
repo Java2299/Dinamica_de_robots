@@ -1,0 +1,28 @@
+$roscore
+
+
+Activar minicom:
+$ sudo chmod 777 /dev/tty8
+$ ls -al /dev/tty8
+
+Emisor:
+
+$ mkdir -p ~/demo/src
+$ cd ~/demo/src
+$ cd ~/demo/src
+$ git clone https://github.com/BerkeleyExpertSystemTechnologiesLab/2d-spine-control-hardware
+$ cd 2d-spine-control-hardware/
+$ catkin_init_workspace
+$ cd 2d spine/ros-spine-control
+$ catkin_make
+$ source devel/setup.bash 
+$ rosrun spine_controller serial_tx_cmdline.py /dev/tty8
+
+
+Receptor:
+
+$ cd demo
+$ rostopic list
+$rostopic echo /serial_tx_cmdline
+
+Link del video: https://www.youtube.com/watch?v=Y0aF93SD8Ig
